@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>Insert title here</title>
+</head>
+<body>
+Hello Spring Boot!!!!
+<br>
+欢迎:<span th:text="${username}"></span>
+<br>
+<span th:text="|天尊:${username}|"></span>
+<span th:if="${age > 35}">油腻大叔</span>
+
+<span th:if="${age < 35}">中年大叔</span>
+<span th:unless="${age<35}" th:text="人生已过其半"></span>
+<span th:unless="${age>8}" th:text="未超过18岁"></span>
+<span th:text="${age>35?'大叔':'小生'}"></span>
+<br>
+
+<tr th:each="s : ${list}">
+<td th:text="${s.id}">id</td>
+<td th:text="${s.uname}">name</td>
+<td th:text="${s.pwd}">pwd</td><br>
+</tr>
+</body>
+</html>
