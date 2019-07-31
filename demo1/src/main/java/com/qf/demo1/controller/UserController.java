@@ -18,6 +18,8 @@ public class UserController {
     @Autowired
     private Resource resource;
 
+    private String s;
+
  /*   @Value("${images.serverpath}")
     private String imageServer;*/
 
@@ -33,4 +35,6 @@ public class UserController {
         System.out.println(resource.getEmailServer());
         return "1";
     }
+
+
 }
